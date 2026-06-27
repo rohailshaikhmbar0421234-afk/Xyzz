@@ -990,12 +990,11 @@ SUPABASE_URL = "https://jklibjyjzimcjlpvskvw.supabase.co"
 # ══════════════ CONFIG ══════════════
 import os
 
-BOT_TOKEN = "8668947816:AAE-koL0ISj_uZknbm4sxQIp-kTW__033Go"
-USER_API_ID = 14017996
-USER_API_HASH = "c04b4a519be12de0cf2826fde7c0ba9a"
-USER_PHONE = "+923023156905"
-OPENROUTER_API_KEY = ""
-TG_SESSION_STRING = "1BJWap1sBuwmjdqMMX0JI_hE0b5ohdd2uqIUo6DMB_Un-m2cgIq9OQq5z7d-_52fajyORnqMw9l9lImccaOanOufYgDGwPIO7fqC9vDWGK54BHSXdFMHZyPhUChm-aN_Aqf9oi0apZZkuOkkDdFlihw4sOp-SW1CNPhSJOyLAiSWPwVDIRDDwNtG-K6lhw_-CcRKXgcseakZ68PnQZvbGiCFBAsvyx3zUQa8q44q-nfRzVQ-m-U5LxXzaXMH5JWVE0oAEY-hdO606V84i93akgsZzOJPDfUy1i0cEVIbzrWRF-l5jv-HwOvfugqIog8UeVfC6GFlLXkCffDXaX3r2LeXUHufRht4="
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+USER_API_ID = os.environ.get("USER_API_ID")
+USER_API_HASH = os.environ.get("USER_API_HASH")
+USER_PHONE = os.environ.get("USER_PHONE")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 
 def is_authorized(uid: int) -> bool:
     headers = {
