@@ -6,3 +6,6 @@ colorama
 flask
 google-generativeai
 websockets
+beautifulsoup4
+html5lib
+lxml
