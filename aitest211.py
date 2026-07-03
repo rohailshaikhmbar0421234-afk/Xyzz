@@ -1019,11 +1019,11 @@ SUPABASE_URL = "https://jklibjyjzimcjlpvskvw.supabase.co"
 
 import os
 
-BOT_TOKEN = "8247136823:AAFAoEbLGwZmMwX2yLj79OreUTcdV_VQCW0"
-USER_API_ID = 32897927
-USER_API_HASH = "9721a13727264fac1ec68f5b2a077dd3"
-USER_PHONE = ""
-OPENROUTER_API_KEY = ""
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+USER_API_ID = os.environ.get("USER_API_ID")
+USER_API_HASH = os.environ.get("USER_API_HASH")
+USER_PHONE = os.environ.get("USER_PHONE")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 
 def is_authorized(uid: int) -> bool:
     headers = {
